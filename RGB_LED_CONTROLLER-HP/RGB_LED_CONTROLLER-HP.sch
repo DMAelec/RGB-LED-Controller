@@ -1,0 +1,293 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "HIGH POWER RGB LED CONTROLLER"
+Date "10/12/2022"
+Rev "A"
+Comp "DMA"
+Comment1 "Mosfet PWM Controller using 12F6xx PIC"
+Comment2 "Based on  kit http://picprojects.org.uk/projects/rgb/index.htm"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_PIC12:PIC12F629-IP U1
+U 1 1 6348C72A
+P 4350 2680
+F 0 "U1" H 4350 3461 50  0000 C CNN
+F 1 "PIC12F629-IP" H 4350 3370 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 4950 3330 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/41190G.pdf" H 4350 2680 50  0001 C CNN
+	1    4350 2680
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_Microchip_PIC12:PIC12F675-IP U1
+U 1 1 6348CA92
+P 4330 4140
+F 0 "U1" H 4330 4921 50  0000 C CNN
+F 1 "PIC12F675-IP" H 4330 4830 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 4930 4790 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/41190G.pdf" H 4330 4140 50  0001 C CNN
+	1    4330 4140
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D1
+U 1 1 6348D58C
+P 3190 1500
+F 0 "D1" H 3190 1716 50  0000 C CNN
+F 1 "1N4148" H 3190 1625 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3190 1325 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3190 1500 50  0001 C CNN
+	1    3190 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 6348DF12
+P 3670 1400
+F 0 "C1" H 3788 1446 50  0000 L CNN
+F 1 "100uF 25V" H 3788 1355 50  0000 L CNN
+F 2 "" H 3708 1250 50  0001 C CNN
+F 3 "~" H 3670 1400 50  0001 C CNN
+	1    3670 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 6348E200
+P 4090 1090
+F 0 "C2" H 4205 1136 50  0000 L CNN
+F 1 "100nF" H 4205 1045 50  0000 L CNN
+F 2 "" H 4128 940 50  0001 C CNN
+F 3 "~" H 4090 1090 50  0001 C CNN
+	1    4090 1090
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LM78L05_TO92 U2
+U 1 1 6348E7CD
+P 2530 1070
+F 0 "U2" H 2530 1312 50  0000 C CNN
+F 1 "LM78L05_TO92" H 2530 1221 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2530 1295 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM78L05A.pdf" H 2530 1020 50  0001 C CNN
+	1    2530 1070
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J3
+U 1 1 6348FE67
+P 1820 2180
+F 0 "J3" H 1900 2222 50  0000 L CNN
+F 1 "AUX" H 1900 2131 50  0000 L CNN
+F 2 "" H 1820 2180 50  0001 C CNN
+F 3 "~" H 1820 2180 50  0001 C CNN
+	1    1820 2180
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 6349050C
+P 1320 1520
+F 0 "J1" H 1400 1512 50  0000 L CNN
+F 1 "PWR IN" H 1400 1421 50  0000 L CNN
+F 2 "" H 1320 1520 50  0001 C CNN
+F 3 "~" H 1320 1520 50  0001 C CNN
+	1    1320 1520
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x04 J2
+U 1 1 63490D27
+P 1320 1060
+F 0 "J2" H 1400 1052 50  0000 L CNN
+F 1 "PWM OUT" H 1400 961 50  0000 L CNN
+F 2 "" H 1320 1060 50  0001 C CNN
+F 3 "~" H 1320 1060 50  0001 C CNN
+	1    1320 1060
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF540N Q2
+U 1 1 63491091
+P 7210 2720
+F 0 "Q2" H 7416 2766 50  0000 L CNN
+F 1 "IRF540N" H 7416 2675 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7460 2645 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 7210 2720 50  0001 L CNN
+	1    7210 2720
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF540N Q1
+U 1 1 63491B6D
+P 7190 3310
+F 0 "Q1" H 7396 3356 50  0000 L CNN
+F 1 "IRF540N" H 7396 3265 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7440 3235 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 7190 3310 50  0001 L CNN
+	1    7190 3310
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF540N Q3
+U 1 1 63492175
+P 7250 2080
+F 0 "Q3" H 7456 2126 50  0000 L CNN
+F 1 "IRF540N" H 7456 2035 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7500 2005 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 7250 2080 50  0001 L CNN
+	1    7250 2080
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6349290B
+P 5020 860
+F 0 "R?" H 5090 906 50  0000 L CNN
+F 1 "1K" H 5090 815 50  0000 L CNN
+F 2 "" V 4950 860 50  0001 C CNN
+F 3 "~" H 5020 860 50  0001 C CNN
+	1    5020 860 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 634930DF
+P 4780 1280
+F 0 "R?" H 4850 1326 50  0000 L CNN
+F 1 "120R" H 4850 1235 50  0000 L CNN
+F 2 "" V 4710 1280 50  0001 C CNN
+F 3 "~" H 4780 1280 50  0001 C CNN
+	1    4780 1280
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 63493C04
+P 5150 1290
+F 0 "R?" H 5220 1336 50  0000 L CNN
+F 1 "120R" H 5220 1245 50  0000 L CNN
+F 2 "" V 5080 1290 50  0001 C CNN
+F 3 "~" H 5150 1290 50  0001 C CNN
+	1    5150 1290
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 63494056
+P 5490 1340
+F 0 "R?" H 5560 1386 50  0000 L CNN
+F 1 "120R" H 5560 1295 50  0000 L CNN
+F 2 "" V 5420 1340 50  0001 C CNN
+F 3 "~" H 5490 1340 50  0001 C CNN
+	1    5490 1340
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 634940A1
+P 4690 1710
+F 0 "R?" H 4760 1756 50  0000 L CNN
+F 1 "10K" H 4760 1665 50  0000 L CNN
+F 2 "" V 4620 1710 50  0001 C CNN
+F 3 "~" H 4690 1710 50  0001 C CNN
+	1    4690 1710
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 63494D8C
+P 4980 1710
+F 0 "R?" H 5050 1756 50  0000 L CNN
+F 1 "10K" H 5050 1665 50  0000 L CNN
+F 2 "" V 4910 1710 50  0001 C CNN
+F 3 "~" H 4980 1710 50  0001 C CNN
+	1    4980 1710
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 63495462
+P 5380 1730
+F 0 "R?" H 5450 1776 50  0000 L CNN
+F 1 "10K" H 5450 1685 50  0000 L CNN
+F 2 "" V 5310 1730 50  0001 C CNN
+F 3 "~" H 5380 1730 50  0001 C CNN
+	1    5380 1730
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 6349588A
+P 5690 2760
+F 0 "SW1" H 5690 3045 50  0000 C CNN
+F 1 "SW_Push" H 5690 2954 50  0000 C CNN
+F 2 "" H 5690 2960 50  0001 C CNN
+F 3 "~" H 5690 2960 50  0001 C CNN
+	1    5690 2760
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 63496AB4
+P 4690 860
+F 0 "R?" H 4760 906 50  0000 L CNN
+F 1 "1K" H 4760 815 50  0000 L CNN
+F 2 "" V 4620 860 50  0001 C CNN
+F 3 "~" H 4690 860 50  0001 C CNN
+	1    4690 860 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 63496C57
+P 1000 2560
+F 0 "H1" H 1100 2606 50  0000 L CNN
+F 1 "MountingHole" H 1100 2515 50  0000 L CNN
+F 2 "" H 1000 2560 50  0001 C CNN
+F 3 "~" H 1000 2560 50  0001 C CNN
+	1    1000 2560
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 63497835
+P 1000 2850
+F 0 "H2" H 1100 2896 50  0000 L CNN
+F 1 "MountingHole" H 1100 2805 50  0000 L CNN
+F 2 "" H 1000 2850 50  0001 C CNN
+F 3 "~" H 1000 2850 50  0001 C CNN
+	1    1000 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 63498559
+P 1020 3150
+F 0 "H3" H 1120 3196 50  0000 L CNN
+F 1 "MountingHole" H 1120 3105 50  0000 L CNN
+F 2 "" H 1020 3150 50  0001 C CNN
+F 3 "~" H 1020 3150 50  0001 C CNN
+	1    1020 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 63498EA1
+P 990 3440
+F 0 "H4" H 1090 3486 50  0000 L CNN
+F 1 "MountingHole" H 1090 3395 50  0000 L CNN
+F 2 "" H 990 3440 50  0001 C CNN
+F 3 "~" H 990 3440 50  0001 C CNN
+	1    990  3440
+	1    0    0    -1  
+$EndComp
+Text Notes 7030 3950 0    79   ~ 0
+Q1 RED\nQ2GREEN\nQ3BLUE
+$EndSCHEMATC
