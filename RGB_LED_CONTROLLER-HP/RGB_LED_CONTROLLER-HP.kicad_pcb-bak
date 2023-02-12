@@ -60,7 +60,7 @@
     (pad_to_mask_clearance 0.051)
     (solder_mask_min_width 0.25)
     (aux_axis_origin 0 0)
-    (visible_elements 7FFFFFFF)
+    (visible_elements FFFFFF7F)
     (pcbplotparams
       (layerselection 0x010fc_ffffffff)
       (usegerberextensions false)
@@ -101,9 +101,9 @@
     (uvia_drill 0.1)
   )
 
-  (gr_line (start 0 0) (end 0 63.5) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 0 63.5) (end 63.5 63.5) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 63.5 0) (end 63.5 63.5) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 0 0) (end 63.5 0) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 0 0) (end 0 50.8) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 0 50.8) (end 50.8 50.8) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 50.8 0) (end 50.8 50.8) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 0 0) (end 50.8 0) (layer Edge.Cuts) (width 0.05))
 
 )
