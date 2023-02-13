@@ -313,23 +313,23 @@ $EndComp
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 634BDEFD
-P 3480 4630
-F 0 "H1" H 3580 4676 50  0000 L CNN
-F 1 "MountingHole" H 3580 4585 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 3480 4630 50  0001 C CNN
-F 3 "~" H 3480 4630 50  0001 C CNN
-	1    3480 4630
+P 3470 4640
+F 0 "H1" H 3570 4686 50  0000 L CNN
+F 1 "MountingHole" H 3570 4595 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 3470 4640 50  0001 C CNN
+F 3 "~" H 3470 4640 50  0001 C CNN
+	1    3470 4640
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H2
 U 1 1 634BEC96
-P 4220 4630
-F 0 "H2" H 4320 4676 50  0000 L CNN
-F 1 "MountingHole" H 4320 4585 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 4220 4630 50  0001 C CNN
-F 3 "~" H 4220 4630 50  0001 C CNN
-	1    4220 4630
+P 4210 4640
+F 0 "H2" H 4310 4686 50  0000 L CNN
+F 1 "MountingHole" H 4310 4595 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 4210 4640 50  0001 C CNN
+F 3 "~" H 4210 4640 50  0001 C CNN
+	1    4210 4640
 	1    0    0    -1  
 $EndComp
 Connection ~ 3630 3530
