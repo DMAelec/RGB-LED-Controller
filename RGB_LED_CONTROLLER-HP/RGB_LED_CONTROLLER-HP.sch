@@ -26,10 +26,10 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/41190G.pdf" H 4150 3820 50 
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:CP C1
+L Device:CP C2
 U 1 1 6348DF12
 P 3060 2060
-F 0 "C1" H 2800 2110 50  0000 L CNN
+F 0 "C2" H 2800 2110 50  0000 L CNN
 F 1 "100uF 25V" H 2520 2000 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 3098 1910 50  0001 C CNN
 F 3 "~" H 3060 2060 50  0001 C CNN
@@ -37,10 +37,10 @@ F 3 "~" H 3060 2060 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C2
+L Device:C C1
 U 1 1 6348E200
 P 4090 2060
-F 0 "C2" H 4205 2106 50  0000 L CNN
+F 0 "C1" H 4205 2106 50  0000 L CNN
 F 1 "100nF" H 4205 2015 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4128 1910 50  0001 C CNN
 F 3 "~" H 4090 2060 50  0001 C CNN
@@ -70,39 +70,6 @@ F 3 "~" H 4180 6450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_FET:IRF540N Q2
-U 1 1 63491091
-P 7140 3820
-F 0 "Q2" H 7346 3866 50  0000 L CNN
-F 1 "IRF540N" H 7346 3775 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7390 3745 50  0001 L CIN
-F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 7140 3820 50  0001 L CNN
-	1    7140 3820
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_FET:IRF540N Q1
-U 1 1 63491B6D
-P 6500 3160
-F 0 "Q1" H 6706 3206 50  0000 L CNN
-F 1 "IRF540N" H 6706 3115 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6750 3085 50  0001 L CIN
-F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 6500 3160 50  0001 L CNN
-	1    6500 3160
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_FET:IRF540N Q3
-U 1 1 63492175
-P 7850 4490
-F 0 "Q3" H 8056 4536 50  0000 L CNN
-F 1 "IRF540N" H 8056 4445 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8100 4415 50  0001 L CIN
-F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 7850 4490 50  0001 L CNN
-	1    7850 4490
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R1
 U 1 1 6349290B
 P 3360 3260
@@ -117,8 +84,8 @@ $Comp
 L Device:R R5
 U 1 1 634930DF
 P 5720 4490
-F 0 "R5" H 5790 4536 50  0000 L CNN
-F 1 "120R" H 5790 4445 50  0000 L CNN
+F 0 "R5" V 5890 4440 50  0000 L CNN
+F 1 "150R" V 5810 4390 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5650 4490 50  0001 C CNN
 F 3 "~" H 5720 4490 50  0001 C CNN
 	1    5720 4490
@@ -128,8 +95,8 @@ $Comp
 L Device:R R4
 U 1 1 63493C04
 P 5720 3820
-F 0 "R4" H 5790 3866 50  0000 L CNN
-F 1 "120R" H 5790 3775 50  0000 L CNN
+F 0 "R4" V 5890 3770 50  0000 L CNN
+F 1 "150R" V 5810 3720 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5650 3820 50  0001 C CNN
 F 3 "~" H 5720 3820 50  0001 C CNN
 	1    5720 3820
@@ -139,8 +106,8 @@ $Comp
 L Device:R R3
 U 1 1 63494056
 P 5720 3160
-F 0 "R3" H 5790 3206 50  0000 L CNN
-F 1 "120R" H 5790 3115 50  0000 L CNN
+F 0 "R3" V 5890 3110 50  0000 L CNN
+F 1 "150R" V 5810 3060 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5650 3160 50  0001 C CNN
 F 3 "~" H 5720 3160 50  0001 C CNN
 	1    5720 3160
@@ -223,18 +190,18 @@ F 3 "~" H 1000 3440 50  0001 C CNN
 	1    1000 3440
 	1    0    0    -1  
 $EndComp
-Text Notes 5160 2680 0    79   ~ 0
-Q1 RED\nQ2GREEN\nQ3BLUE
+Text Notes 5800 2320 0    79   ~ 0
+IRLZ44NPBF - LOGIC LEVEL N-CHANNEL MOSFET\nQ1 RED\nQ2GREEN\nQ3BLUE
 $Comp
 L Connector:Screw_Terminal_01x05 J1
 U 1 1 63E776E2
 P 9090 4170
 F 0 "J1" H 9170 4212 50  0000 L CNN
 F 1 "Terminal Block" H 9170 4121 50  0000 L CNN
-F 2 "" H 9090 4170 50  0001 C CNN
+F 2 "Barrier_Terminal_Block_TE-Connectivity:Barrier_Terminal_Block_TE_4DB-P108-05_5P_8.26mm" H 9090 4170 50  0001 C CNN
 F 3 "~" H 9090 4170 50  0001 C CNN
 	1    9090 4170
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Diode:1N4001 D1
@@ -659,4 +626,37 @@ Wire Wire Line
 	8640 3970 8640 2840
 Wire Wire Line
 	6600 2840 8640 2840
+$Comp
+L Transistor_FET:IRLZ44N Q1
+U 1 1 63FBD871
+P 6500 3160
+F 0 "Q1" H 6705 3207 50  0000 L CNN
+F 1 "IRLZ44N" H 6705 3114 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6750 3085 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irlz44n.pdf" H 6500 3160 50  0001 L CNN
+	1    6500 3160
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRLZ44N Q2
+U 1 1 63FC185E
+P 7140 3820
+F 0 "Q2" H 7345 3867 50  0000 L CNN
+F 1 "IRLZ44N" H 7345 3774 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7390 3745 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irlz44n.pdf" H 7140 3820 50  0001 L CNN
+	1    7140 3820
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRLZ44N Q3
+U 1 1 63FC4B32
+P 7850 4490
+F 0 "Q3" H 8055 4537 50  0000 L CNN
+F 1 "IRLZ44N" H 8055 4444 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8100 4415 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irlz44n.pdf" H 7850 4490 50  0001 L CNN
+	1    7850 4490
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Barrier_Terminal_Block_TE-Connectivity)(type KiCad)(uri ${KIPRJMOD}/Barrier_Terminal_Block_TE-Connectivity.pretty)(options "")(descr ""))
+)
