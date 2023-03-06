@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "RGB LED Piranha Super-Flux")(type KiCad)(uri "${KIPRJMOD}/RGB LED Piranha Super-Flux.pretty")(options "")(descr ""))
+)
