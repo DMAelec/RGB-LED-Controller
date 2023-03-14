@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:\\Users\\ALEX W10\\Documents\\KICAD PROJECTS\\RGB_LED_CONTROLLER\\RGB_Piranha_LED_Board\\RGB_Piranha_LED_Board.sch")
-    (date "3/5/2023 5:31:28 PM")
+    (date "3/14/2023 2:36:04 PM")
     (tool "Eeschema (5.1.0)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
